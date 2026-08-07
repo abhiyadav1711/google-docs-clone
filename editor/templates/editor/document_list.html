@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Documents</title>
+</head>
+<body>
+    <h1>My Documents</h1>
+    <a href="{% url 'document_create' %}">+ New Document</a>
+
+    <ul>
+        {% for doc in documents %}
+            <li>
+                <a href="{% url 'document_edit' doc.pk %}">{{ doc.title }}</a>
+                &mdash; last edited {{ doc.updated_at }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
