@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Document</title>
+</head>
+<body>
+    <a href="{% url 'document_list' %}">&larr; Back to My Documents</a>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{ document.title }}">
+        <br><br>
+        <textarea name="content" rows="25" cols="90">{{ document.content }}</textarea>
+        <br><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
