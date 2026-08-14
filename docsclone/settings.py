@@ -58,3 +58,4 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'editor/static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'login'
+CSRF_TRUSTED_ORIGINS = ['https://*.app.github.dev']
